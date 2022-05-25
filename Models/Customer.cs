@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GeneralStoreAPI.Models
-{
+
     public partial class Customer
     {
         public Customer()
@@ -16,4 +15,4 @@ namespace GeneralStoreAPI.Models
 
         public virtual ICollection<Transaction> Transactions { get; set; }
     }
-}
+

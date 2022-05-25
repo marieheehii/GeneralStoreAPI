@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using GeneralStoreAPI.Models;
 
-namespace GeneralStoreAPI.Data
-{
+
     public partial class GeneralStoreDBContext : DbContext
     {
         public GeneralStoreDBContext()
@@ -65,10 +63,10 @@ namespace GeneralStoreAPI.Data
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Transacti__Produ__3D5E1FD2");
             });
-
+            
             OnModelCreatingPartial(modelBuilder);
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
-}
+
